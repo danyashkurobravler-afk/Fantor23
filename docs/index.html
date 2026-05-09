@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#232946" />
+  <title>Storm Probe — Охотники за смерчем (Tycoon)</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu" class="menu active">
+    <h1>Storm Probe: <span style="font-size:0.6em">Tycoon</span></h1>
+    <button onclick="startGame()">Играть</button>
+    <button onclick="showGarage()">Гараж</button>
+    <button onclick="showMap()">Карта</button>
+    <button onclick="showAdmin()">Админ</button>
+    <button onclick="requestFullscreen()">Fullscreen</button>
+    <button onclick="rotateScreen()">Повернуть экран</button>
+    <p style="margin-top:2em;font-size:.8em;">by danyashkurobravler-afk<br/>
+      Demo — концепт.<br />Repo: <a href="https://github.com/danyashkurobravler-afk/Fantor23" target="_blank">GitHub</a>
+    </p>
+  </div>
+  <canvas id="game" style="display:none;position:absolute;top:0;left:0;width:100vw;height:100vh;"></canvas>
+
+  <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    function startGame() { window.Game && Game.start && Game.start(); }
+    function showGarage() { window.Game && Game.menu && Game.menu('garage'); }
+    function showMap() { window.Game && Game.menu && Game.menu('map'); }
+    function showAdmin() { window.Game && Game.menu && Game.menu('admin'); }
+    function requestFullscreen() {
+      (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen());
+    }
+    function rotateScreen() {
+      if(screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock(screen.orientation.type.startsWith('portrait') ? 'landscape' : 'portrait');
+      }
+    }
+  </script>
+</body>
+</html>
