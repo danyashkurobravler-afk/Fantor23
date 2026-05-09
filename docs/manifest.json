@@ -1,0 +1,14 @@
+{
+  "name": "Storm Probe: Tycoon",
+  "short_name": "Storm Probe",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#232946",
+  "theme_color": "#232946",
+  "orientation": "landscape",
+  "description": "HTML 3D-игра про охоту за торнадо. Three.js, mobile, PWA.",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
