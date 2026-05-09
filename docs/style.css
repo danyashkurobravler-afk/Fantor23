@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #232946;
+  color: #ffeedd;
+}
+.menu {
+  width: 100vw;
+  min-height: 100vh;
+  background: #232946;
+  color: #ffeedd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.menu button {
+  font-size: 1.3em;
+  padding: 0.7em 3em;
+  margin: 0.5em;
+  border: none;
+  border-radius: 1.2em;
+  background: #4f5d75;
+  color: #ffeedd;
+  box-shadow: 0 4px 20px #222a;
+  cursor: pointer;
+}
+.menu button:hover {
+  background: #c48957;
+  color: #232946;
+}
+#gameHUD {
+  display:none;
+  position:fixed;
+  left:0;top:0;width:100vw;height:100vh;pointer-events:none;
+}
+#garage, #map, #adminPanel {
+  display:none;
+  position:fixed;
+  left:0;top:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(20,23,28,0.97);
+  justify-content:center;
+  align-items:center;
+  z-index:10;
+  color:#ffefd9;
+  font-size:2em;
+}
